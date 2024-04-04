@@ -1,6 +1,6 @@
 ---
 - name: Generate a report on XZ versions
-  hosts: Greg-rocky9
+  hosts: Greg-rocky9-group
   gather_facts: false
   vars:
   tasks:
