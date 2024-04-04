@@ -11,6 +11,7 @@
       # stdout_lines": [
       # "xz (XZ Utils) 5.2.5", 
     - name: Display xz_version to screen
-      when: xz_version.stdout_lines[0] == "xz (XZ Utils) 5.2.4"
+      when: xz_version.stdout_lines[0] == "xz (XZ Utils) 5.6.0" or xz_version.stdout_lines[0] == "xz (XZ Utils) 5.6.1"
       ansible.builtin.debug:
-        var: xz_version
+        # var: xz_version
+        msg: "{{ inventory_hostname }} is vulnerable to the exploit {{ xz_version.stdout_lines[0] }}"
