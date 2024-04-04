@@ -1,0 +1,13 @@
+---
+- name: Generate a report on XZ versions
+  hosts: Greg-rocky9
+  gather_facts: false
+  vars:
+  tasks:
+    - name: Shell command to gather XZ versions
+      ansible.builtin.shell: xz --version
+      register: xz_version
+
+    - name: Display xz_version to screen
+      ansible.builtin.debug:
+        var: xz_version
