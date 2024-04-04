@@ -11,6 +11,6 @@
       # stdout_lines": [
       # "xz (XZ Utils) 5.2.5", 
     - name: Display xz_version to screen
-      when: xz_version.stdout_lines[0] == "xz (XZ Utils) 5.2.5"
+      when: xz_version.stdout_lines[0] == "xz (XZ Utils) 5.2.4"
       ansible.builtin.debug:
         var: xz_version
